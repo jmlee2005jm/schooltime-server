@@ -24,7 +24,7 @@ public class LoginController {
         ResponseEntity<LoginResponseTO> responseEntity;
         if(user != null){
             LoggerFactory.getLogger("LoginController").info("login: user id = " + user.getId());
-            responseEntity = new ResponseEntity<>(new LoginResponseTO(user.getId(), user.getName(), "Success"), HttpStatus.OK);
+            responseEntity = new ResponseEntity<>(new LoginResponseTO(user.getNum(), user.getName(), "Success"), HttpStatus.OK);
         } else {
             LoggerFactory.getLogger("LoginController").info("Authentification Error");
             responseEntity = new ResponseEntity<>(new LoginResponseTO(-999L, "", "Authentification Error"), HttpStatus.UNAUTHORIZED);

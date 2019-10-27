@@ -14,7 +14,7 @@ public class LoginService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public User login(LoginTO loginTO) {
-        User user = userRepository.findByEmail(loginTO.getEmail());
+        User user = userRepository.findById(loginTO.getId());
         if(user != null && bCryptPasswordEncoder.matches(loginTO.getPassword(), user.getPassword())){
             LoggerFactory.getLogger("LoginService").info("####login: Success "+ user.getId() + ", "+ user.getName());
         } else {

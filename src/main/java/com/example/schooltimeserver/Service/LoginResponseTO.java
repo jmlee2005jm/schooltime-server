@@ -6,12 +6,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class LoginResponseTO {
-    private Long userId;
+    private Long userNum;
     private String name;
     private String message;
 
-    public LoginResponseTO(Long userId, String name , String message){
-        this.userId = userId;
+    public LoginResponseTO(Long userNum, String name , String message){
+        this.userNum = userNum;
         this.name = name;
         this.message = message;
     }

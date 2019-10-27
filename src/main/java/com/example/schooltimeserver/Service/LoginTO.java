@@ -6,6 +6,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class LoginTO {
-    private String email;
+    private String id;
     private String password;
 }
