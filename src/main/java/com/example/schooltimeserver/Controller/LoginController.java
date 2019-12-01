@@ -20,6 +20,7 @@ public class LoginController {
 
     @PostMapping
     public ResponseEntity<LoginResponseTO> login(@RequestBody LoginTO loginTO) {
+        LoggerFactory.getLogger("LoginController").info("test");
         User user = loginService.login(loginTO);
         ResponseEntity<LoginResponseTO> responseEntity;
         if(user != null){

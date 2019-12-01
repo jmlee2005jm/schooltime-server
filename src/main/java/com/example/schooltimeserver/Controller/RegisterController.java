@@ -1,10 +1,8 @@
 package com.example.schooltimeserver.Controller;
 
-import com.example.schooltimeserver.Domain.User;
 import com.example.schooltimeserver.Service.RegisterService;
 import com.example.schooltimeserver.Service.UserTO;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
