@@ -3,12 +3,14 @@ package com.example.schooltimeserver.Domain;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
 @Getter
+@Setter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,8 +30,5 @@ public class User {
         this.id = id;
         this.password = password;
         this.name = name;
-    }
-    public void setPassword(String password){
-     this.password = password;   
     }
 }

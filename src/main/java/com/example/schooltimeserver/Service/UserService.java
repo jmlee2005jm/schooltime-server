@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class RegisterService {
+public class UserService {
     private static final Logger logger = LoggerFactory.getLogger("UserService");
     private final UserRepository userRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -22,4 +22,9 @@ public class RegisterService {
         userRepository.save(user);
     }
 
+    public void DeleteUser(Long id){
+        User user = userRepository.findByNum(id);
+        logger.info("Delete user" + user.getId());
+        userRepository.delete(user);
+    }
 }
